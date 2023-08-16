@@ -1,0 +1,34 @@
+{
+    "display_information": {
+        "name": "OAuth Sample"
+    },
+    "features": {
+        "bot_user": {
+            "display_name": "OAuth Sample",
+            "always_online": false
+        },
+        "slash_commands": [
+            {
+                "command": "/horea",
+                "url": "http://localhost:8081/slack/events",
+                "description": "test",
+                "should_escape": false
+            }
+        ]
+    },
+    "oauth_config": {
+        "redirect_urls": [
+            "http://localhost:8081/slack/oauth_redirect"
+        ],
+        "scopes": {
+            "bot": [
+                "commands"
+            ]
+        }
+    },
+    "settings": {
+        "org_deploy_enabled": false,
+        "socket_mode_enabled": false,
+        "token_rotation_enabled": false
+    }
+}
